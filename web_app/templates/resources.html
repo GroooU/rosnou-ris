@@ -1,0 +1,21 @@
+<!-- templates/resources.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Учебные материалы</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<h1>Учебные материалы</h1>
+<ul>
+    {% for res in resources %}
+    <li>
+        <h2>{{ res.title }}</h2>
+        <p>{{ res.description }}</p>
+        <a href="{{ res.url }}">Перейти к ресурсу</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="/">На главную</a>
+</body>
+</html>

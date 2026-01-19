@@ -1,0 +1,30 @@
+<!-- templates/schedule.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Расписание занятий</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<h1>Расписание занятий</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Курс</th>
+            <th>Время</th>
+            <th>Аудитория</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in schedule %}
+        <tr>
+            <td>{{ item.course_name }}</td>
+            <td>{{ item.schedule_time }}</td>
+            <td>{{ item.location }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/">На главную</a>
+</body>
+</html>
