@@ -3,3 +3,7 @@ uvicorn
 httpx
 jinja2
 pydantic
+
+# CI tools
+pytest
+flake8
